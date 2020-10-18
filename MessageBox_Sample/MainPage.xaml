@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="MessageBox_Sample.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:MessageBox_Sample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="550"
+    Height="300"
+    VerticalAlignment="Top"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid Loaded="Grid_Loaded">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button
+                x:Name="ContentDialogButton"
+                Background="Transparent"
+                Click="ContentDialogButton_Click"
+                Content="Content" />
+            <Button
+                x:Name="MessageDialogNutton"
+                Background="Transparent"
+                Click="MessageDialogNutton_Click"
+                Content="Message" />
+            <Button
+                x:Name="InputDialogNutton"
+                Background="Transparent"
+                Click="InputDialogNutton_Click"
+                Content="Input" />
+            <Canvas HorizontalAlignment="Stretch">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Canvas.ZIndex="0"
+                    FontSize="20"
+                    Text=" Sample MessageBox" />
+                <Rectangle
+                    x:Name="TittleBar"
+                    Width="{x:Bind Width, Mode=OneWay}"
+                    Height="40"
+                    Canvas.ZIndex="1"
+                    Fill="Transparent" />
+            </Canvas>
+        </StackPanel>
+        <Frame x:Name="Content" Grid.Row="1" />
+    </Grid>
+
+</Page>

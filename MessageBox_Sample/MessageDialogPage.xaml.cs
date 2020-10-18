@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.ServiceModel.Channels;
+using Windows.Foundation;
+using Windows.Foundation.Collections;
+using Windows.UI.Popups;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Navigation;
+
+// 空白ページの項目テンプレートについては、https://go.microsoft.com/fwlink/?LinkId=234238 を参照してください
+
+namespace MessageBox_Sample
+{
+    /// <summary>
+    /// それ自体で使用できる空白ページまたはフレーム内に移動できる空白ページ。
+    /// </summary>
+    public sealed partial class MessageDialogPage : Page
+    {
+        public MessageDialogPage()
+        {
+            this.InitializeComponent();
+        }
+
+        private void MessageButton_Click(object sender, RoutedEventArgs e)
+        {
+            _ = new MessageDialog(MessageText.Text, "Message Dialog Here!!").ShowAsync();
+        }
+    }
+}
+

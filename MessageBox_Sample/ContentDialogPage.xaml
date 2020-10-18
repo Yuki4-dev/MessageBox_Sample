@@ -1,0 +1,74 @@
+﻿<Page
+    x:Class="MessageBox_Sample.ContentDialogPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:MessageBox_Sample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    NavigationCacheMode="Enabled"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ControlStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button
+            x:Name="OkButton"
+            Grid.Row="0"
+            Grid.Column="0"
+            Background="#78FC53"
+            Click="OkButton_Click"
+            Content="OK Dialog"
+            Style="{StaticResource ButtonStyle}" />
+        <Button
+            x:Name="YesNoButton"
+            Grid.Row="1"
+            Grid.Column="0"
+            Background="#FF4639"
+            Click="YesNoButton_Click"
+            Content="YesNo Dialog"
+            Style="{StaticResource ButtonStyle}" />
+        <Button
+            x:Name="ThreeButton"
+            Grid.Row="2"
+            Grid.Column="0"
+            Background="#3BA2FC"
+            Click="ThreeButton_Click"
+            Content="3 Button Dialog"
+            Style="{StaticResource ButtonStyle}" />
+        <TextBlock
+            x:Name="OkText"
+            Grid.Row="0"
+            Grid.Column="1"
+            Style="{StaticResource TextBlockStyle}"
+            Text="Click Button!!" />
+        <TextBlock
+            x:Name="YesNoText"
+            Grid.Row="1"
+            Grid.Column="1"
+            Style="{StaticResource TextBlockStyle}"
+            Text="Click Button!!" />
+        <TextBlock
+            x:Name="TreeText"
+            Grid.Row="2"
+            Grid.Column="1"
+            Style="{StaticResource TextBlockStyle}"
+            Text="Click Button!!" />
+    </Grid>
+
+</Page>

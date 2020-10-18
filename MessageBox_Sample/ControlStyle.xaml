@@ -1,0 +1,32 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MessageBox_Sample">
+
+    <Style x:Key="ButtonStyle" TargetType="Button">
+        <Style.Setters>
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+        </Style.Setters>
+    </Style>
+    <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+        <Style.Setters>
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="TextAlignment" Value="Start" />
+            <Setter Property="FontSize" Value="18" />
+        </Style.Setters>
+    </Style>
+    <Style x:Key="TextBoxStyle" TargetType="TextBox">
+        <Style.Setters>
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="TextAlignment" Value="Start" />
+            <Setter Property="FontSize" Value="18" />
+        </Style.Setters>
+    </Style>
+
+</ResourceDictionary>
