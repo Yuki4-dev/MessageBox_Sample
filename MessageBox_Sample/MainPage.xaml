@@ -47,7 +47,7 @@
                     Fill="Transparent" />
             </Canvas>
         </StackPanel>
-        <Frame x:Name="Content" Grid.Row="1" />
+        <Frame x:Name="ContentFrame" Grid.Row="1" />
     </Grid>
 
 </Page>
